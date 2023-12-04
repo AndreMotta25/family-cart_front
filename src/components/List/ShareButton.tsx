@@ -1,13 +1,13 @@
 import * as Chakra from '@chakra-ui/react'
-import { ShareIcon } from '../Icons/Share/ShareIcon'
+import { ShareIcon } from '../Icons/ShareIcon'
 import { UpscaleButton } from '../UpscaleButton'
 
 
 type ShareButtonProps = Chakra.IconButtonProps & { 
-    colorIcon: string    
+    colorIcon?: string    
 }
 
-const ShareButton = ({colorIcon,...rest}:ShareButtonProps) => { 
-    return (<UpscaleButton icon={<ShareIcon boxSize={"1.5rem"} color={colorIcon}/>} {...rest}/>)
+const ShareButton = ({colorIcon,_hover,...rest}:ShareButtonProps) => { 
+    return (<UpscaleButton tooltip='Compatilhar' icon={<ShareIcon boxSize={"1.5rem"} color={colorIcon}/>} _hover={_hover} {...rest}/>)
 }
 export {ShareButton}
