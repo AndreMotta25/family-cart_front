@@ -1,8 +1,8 @@
 import * as Chakra from '@chakra-ui/react';
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 type TooltipProps = {
-    children: ReactElement;
+    children: ReactNode[] | ReactNode | JSX.Element;
 } & Chakra.TooltipProps;
 
 const Tooltip = ({children, ...rest}:TooltipProps) => (
