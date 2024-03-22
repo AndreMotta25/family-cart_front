@@ -7,11 +7,8 @@ const Navigations = () => {
             <NavLink href="/dashboard"> 
                 Dashboard
             </NavLink>
-            <NavLink href="/amigos">  
-                Amigos
-            </NavLink>
-            <NavLink href="/shared" textAlign={"center"} w={"100%"} px={"0.5rem"} lineHeight={1}>  
-                Listas compartilhadas
+            <NavLink href="/lists">  
+                Listas
             </NavLink>
         </Stack>
     )
