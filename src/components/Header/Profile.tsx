@@ -30,11 +30,6 @@ const Profile = () => {
                         Perfil
                     </NavLink>     
                 </MenuItem>
-                <MenuItem  p={0} bg={"gray.900"}>
-                    <NavLink fontSize={"1rem"} w={"100%"} textAlign={"center"} href=''>
-                        Amigos
-                    </NavLink>     
-                </MenuItem>
                 <MenuItem bg={"red.200"} borderRadius={"5px"}  border={"none"} p={0} alignItems={"center"} justifyContent={"center"}>
                     <ButtonLogout/>
                 </MenuItem>
