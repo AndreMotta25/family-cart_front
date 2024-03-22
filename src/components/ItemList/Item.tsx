@@ -6,17 +6,15 @@ import ResponsiveShortText from '../ResponsiveShortText';
 
 export interface IItem {
   name:string;
-  link: string;
+  url: string;
   id?: string;
 }
 export interface IItemProps {
     item: IItem;
     updateItem: (id:string) => void;
-    removeItem: (id:string) => void;
 }
 
-const Item = ({item,updateItem,removeItem}:IItemProps) => {
-  // console.log(item)
+const Item = ({item,updateItem}:IItemProps) => {
   return (
   <Chakra.ListItem
     key={item.id}
@@ -34,7 +32,7 @@ const Item = ({item,updateItem,removeItem}:IItemProps) => {
     <ShortText flex={1} fontSize={"1.5rem"}>
       {item.name}
     </ShortText>
-    <ActionsItem item={item} updateItem={updateItem} removeItem={removeItem}/>
+    <ActionsItem item={item} updateItem={updateItem}/>
   </Chakra.ListItem>);
 };
 export { Item };
