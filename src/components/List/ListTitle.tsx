@@ -9,7 +9,7 @@ type ListTitleProps = {
 
 const ListTitle = ({details}:ListTitleProps) => {
   return (
-    <Chakra.Box w={"100%"}>
+    <Chakra.Box w={"100%"} position={"relative"}>
           <ResponsiveShortText as={"h3"}>
             {details.name}
           </ResponsiveShortText>
