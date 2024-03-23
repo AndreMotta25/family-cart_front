@@ -4,7 +4,7 @@ import { UpscaleButton } from '../UpscaleButton'
 
 
 type ShareButtonProps = Chakra.IconButtonProps & { 
-    colorIcon?: string    
+    colorIcon?: string;
 }
 
 const ShareButton = ({colorIcon,_hover,...rest}:ShareButtonProps) => { 
