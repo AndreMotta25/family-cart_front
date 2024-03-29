@@ -76,7 +76,7 @@ const Register = () => {
     return (
         <Flex as="form" bg={'white'} alignItems={"center"} justifyContent={"center"} mx={"auto"} minHeight={"100vh"}>
             { 
-                ((counter <= 2) &&
+                ((counter < 2) &&
                 sections.map((Section,index) => {
                      const section = nameSectios[index] as keyof sections;
                      if(index === counter) return (<Controller key={index} name={section} control={control} render={({field}) => 
