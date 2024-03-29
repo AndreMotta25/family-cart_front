@@ -14,6 +14,9 @@ import BoxRoot from "@/components/BoxRoot";
 import { useAxiosMutate } from "@/hooks/useAxiosMutate";
 import { useToast } from "@/hooks/useToast";
 import Head from "next/head";
+import { EditIcon } from "@/components/Icons/EditIcon";
+import { color } from "framer-motion";
+import { UploadAvatar } from "@/components/UploadAvatar";
 
 interface IPassFields {
     password: string;
@@ -75,9 +78,9 @@ const Profile: NextPageWithLayout = () => {
                 <title>Perfil</title>
         </Head>
         <Flex w={"100%"} as="main" py={'1rem'} flexDirection={["column","column","row"]} paddingBottom={"7rem"}  borderRadius={"0.5rem"} gap={'1rem'}>
-            <BoxRoot w="100%" bg={"gray.800"} padding={'1.5rem'} borderRadius={"0.5rem"} as='form'>
-                <Box mb={"2rem"}>
-                    <Avatar mx={"auto"} my={0} display={"flex"} name={session?.user.name}/>
+            <BoxRoot w="100%" bg={"gray.800"} padding={'1.5rem'} borderRadius={"0.5rem"} as='div'>
+                <Box mb={"2rem"} >
+                    <UploadAvatar/>
                 </Box>
                 <InputForm  id="email" label="email" isModify={false} w={"100%"} value={session?.user.email} margin={"0 0 1rem 0"}/>
                 <Controller name="name" control={controlName} render={({field}) => <InputForm submit={handleSubmitName(handleChangeName)} id="name" label="nome" isModify w={"100%"} error={errorsName.name && errorsName.name.message} {...field}/> }/>
