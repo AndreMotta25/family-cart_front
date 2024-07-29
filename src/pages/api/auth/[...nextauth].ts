@@ -40,7 +40,7 @@ export const authOptions: AuthOptions = {
             async authorize(credentials, req)  {
                 const {email, password} = credentials as ICredentials;
 
-                const res = await fetch(`http://localhost:3333/sign`, {
+                const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/sign`, {
                     method: 'POST',
                     headers: {
                     'Content-Type': 'application/json'
@@ -53,6 +53,7 @@ export const authOptions: AuthOptions = {
                 if (user?.token) {
                     return user
                 } 
+                console.log(user.message)
                 throw new Error(user.message)   
             }
         }),
@@ -74,7 +75,7 @@ export const authOptions: AuthOptions = {
                 Vamos acessar um endpoint especifico para usarmos providers.
             */ 
             if((account?.type !== 'credentials')) {
-                const res = await fetch(`http://localhost:3333/sign_provider?token=${account?.id_token}&provider=${account?.provider}`, {
+                const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}sign_provider?token=${account?.id_token}&provider=${account?.provider}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
