@@ -1,5 +1,4 @@
 import * as Chakra from '@chakra-ui/react'
-import Action from '../Header/Action'
 import TrashIcon from '../Icons/TrashIcon'
 import { UpscaleButton } from '../UpscaleButton'
 
