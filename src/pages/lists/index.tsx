@@ -5,7 +5,7 @@ import SlideAxis from "@/components/SlideMobile/SlideAxis";
 import { ListProvider, useLists } from "@/contexts/list";
 import { ReactElement, useState } from "react";
 import { NextPageWithLayout } from "../_app";
-import { Layout } from "../_layout";
+import  Layout  from "../_layout";
 import Head from "next/head";
 
 export const navigationMenuDistance = "17rem"

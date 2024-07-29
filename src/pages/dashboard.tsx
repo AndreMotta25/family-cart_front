@@ -1,4 +1,4 @@
-import { Layout } from "./_layout";
+import  Layout  from "./_layout";
 import { SimpleGrid, Text} from "@chakra-ui/react";
 import { ListProvider, useLists } from "@/contexts/list";
 import type {NextPageWithLayout} from './_app';

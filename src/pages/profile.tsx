@@ -1,5 +1,5 @@
 import { ReactElement, useState } from "react";
-import { Layout } from "./_layout";
+import Layout  from "./_layout";
 import { NextPageWithLayout } from "./_app";
 import { Box, Button, Flex, Input, Spinner, Text } from "@chakra-ui/react";
 import { navigationMenuDistance } from "./dashboard";

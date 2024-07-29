@@ -26,6 +26,6 @@ const Layout = ({children, ...rest}:ILayoutProps) => {
     )
 }
 
-export {Layout}
+export default Layout
 
 

@@ -31,6 +31,7 @@ type AppPropsWithLayout = AppProps & {
 //   }
 // }
 
+// Tem que envolver todo o corpo 
 const queryClient = new QueryClient();
 
 const App = ({ Component, pageProps}: AppPropsWithLayout) => {
@@ -38,20 +39,22 @@ const App = ({ Component, pageProps}: AppPropsWithLayout) => {
 
     return (
             <SessionProvider session={pageProps.session}>
+              <QueryClientProvider client={queryClient}>
               {Component.auth ? 
               <ChakraProvider theme={theme}>
                 <Auth>
-                    <QueryClientProvider client={queryClient}>
+                    
                       <NotifyProvider>
                         {getLayout(<Component {...pageProps}/>)}
                       </NotifyProvider>
-                    </QueryClientProvider>
+                    
                 </Auth>
               </ChakraProvider>
               : 
               <ChakraProvider theme={theme}>
                 {getLayout(<Component {...pageProps} />)}
               </ChakraProvider>}
+              </QueryClientProvider>
             </SessionProvider>          
       )
      

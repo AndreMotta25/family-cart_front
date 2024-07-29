@@ -1,6 +1,6 @@
 import { ReactElement } from "react"
 import { NextPageWithLayout } from "./_app"
-import { Layout } from "./_layout"
+import  Layout  from "./_layout"
 import { navigationMenuDistance } from "./dashboard"
 import { Flex, Spinner } from "@chakra-ui/react";
 import { ListProvider } from "@/contexts/list";

@@ -1,5 +1,5 @@
 import { Modal } from "@/components/Modal"
-import { Layout } from "@/pages/_layout"
+import  Layout  from "@/pages/_layout"
 import { navigationMenuDistance } from "@/pages/dashboard"
 import { Box, UnorderedList, useDisclosure, Text, Spinner, Flex } from "@chakra-ui/react"
 import { ChangeEvent,FormEvent,ReactElement, useCallback, useState } from "react"
