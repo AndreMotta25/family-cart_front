@@ -14,7 +14,7 @@ const Notify = () => {
     const {incrementNotification, totalNotifications} = useNotify()
     
     const createSsEvent =  useCallback(() => {
-        sse.current = new EventSource(`http://localhost:3333/notifications/realtime_notifications/`,{
+        sse.current = new EventSource(`http://andre-motta-fullstack.kinghost.net:21006/notifications/realtime_notifications/`,{
                                                 headers:{Authorization:`Bearer ${session?.accessToken}`}
                                             });                             
         if(sse.current && session?.accessToken) {
