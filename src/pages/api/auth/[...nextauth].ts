@@ -75,7 +75,7 @@ export const authOptions: AuthOptions = {
                 Vamos acessar um endpoint especifico para usarmos providers.
             */ 
             if((account?.type !== 'credentials')) {
-                const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}sign_provider?token=${account?.id_token}&provider=${account?.provider}`, {
+                const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/sign_provider?token=${account?.id_token}&provider=${account?.provider}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
